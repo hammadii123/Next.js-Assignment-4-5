@@ -1,101 +1,63 @@
 import Image from "next/image";
+import Link from "next/link";
+import styles1 from "./hello1.css"
+import styles2 from "./hello2.css"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    
+<>
+  <header className="header">
+    <h1>My Blog</h1>
+  </header>
+  {/* Blog Section */}
+  <main className="container">
+    <section className="blog-grid">
+      {/* Blog 1 */}
+      <article className="blog-card">
+        {/* <img src="blog1.jpg" alt="Blog 1" /> */}
+        <h2>DevOps and Cloud Computing: Best Practices</h2>
+        <p className="button"> In todays fast-paced tech industry, DevOps and cloud computing are
+        revolutionizing the way we develop, deploy, and manage applications.
+        This blog delves into the best practices for integrating DevOps with
+        cloud infrastructure to optimize efficiency and scalability.</p>
+        {/* <a href="blog1.html">Read More</a> */}
+        <Link   href={"/blog1"}>Read More</Link>
+      </article>
+      {/* Repeat for at least 6 blogs */}
+      <article className="blog-card">
+        {/* <img src="blog2.jpg" alt="Blog 2" /> */}
+        <h2>How AI is Transforming Software Development</h2>
+        <p className="button">Artificial Intelligence (AI) is revolutionizing software development
+        processes. From automating mundane coding tasks to enhancing security
+        and optimizing code, AI tools are reshaping how developers build
+        applications.</p>
+       
+        <Link  href={"/blog2"}>Read More</Link>
+      </article>
+      
+
+
+      {/* Blog3 */}
+      <article className="blog-card">
+        {/* <img src="blog2.jpg" alt="Blog 2" /> */}
+        <h2>Mastering Full-Stack Development in 2024</h2>
+        <p className="button"> Full-stack development is one of the most sought-after skills in the
+        tech industry. It requires knowledge of both front-end and back-end
+        technologies, and staying updated on the latest trends is crucial for
+        success.</p>
+        {/* <a href="blog2.html">Read More</a> */}
+        <Link href={"/blog3"}>Read More</Link>
+      </article>
+    </section>
+  </main>
+  {/* Footer */}
+  <footer className="footer">
+    <p>© 2024 My Blog. All rights reserved.</p>
+  </footer>
+</>
+
+    
   );
 }

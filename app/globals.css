@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -24,4 +24,159 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.navbar ul{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+} */
+
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Header */
+.header {
+  background-color: #4A90E2; /* Primary color */
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #D0021B; /* Secondary color */
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Blog Grid */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Blog Card */
+.blog-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px); /* Animation on hover */
+}
+
+.blog-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-card h2 {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.blog-card p {
+  padding: 0 1rem 1rem;
+  color: #666;
+}
+
+.blog-card a {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  background-color: #4A90E2;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.blog-card a:hover {
+  background-color: #357ABD;
+}
+
+/* Blog Detail */
+.blog-detail {
+  margin-top: 2rem;
+}
+
+.blog-detail h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-detail img {
+  margin-bottom: 1.5rem;
+}
+
+.blog-detail p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.blog-card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.button{
+  height: 220px !important;
 }
