@@ -42,7 +42,14 @@ body {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
+  background-color: #2d4059;
+ 
+  
+  
+ 
+
+  
   color: #333;
   line-height: 1.6;
 }
@@ -59,7 +66,7 @@ img {
 
 /* Header */
 .header {
-  background-color: #4A90E2; /* Primary color */
+  background-color:#222831; /* Primary color */
   padding: 1rem;
   text-align: center;
   color: white;
@@ -71,13 +78,15 @@ img {
 
 /* Footer */
 .footer {
-  background-color: #D0021B; /* Secondary color */
+  background-color: #222831; /* Secondary color */
   padding: 1rem;
   text-align: center;
   color: white;
   position: relative;
   bottom: 0;
   width: 100%;
+  margin-bottom: 0 !important;
+  margin-top: 82px;
 }
 
 /* Blog Grid */
@@ -107,7 +116,9 @@ img {
 
 /* Blog Card */
 .blog-card {
-  background-color: white;
+  /* background-color: white;
+   */
+   background-color: #eeeeee;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -126,18 +137,21 @@ img {
 .blog-card h2 {
   font-size: 1.5rem;
   padding: 1rem;
+  text-align: center;
+  font-weight: 500;
 }
 
 .blog-card p {
   padding: 0 1rem 1rem;
   color: #666;
+  text-align: center;
 }
 
 .blog-card a {
   display: block;
   text-align: center;
   padding: 1rem;
-  background-color: #4A90E2;
+  background-color: #b92c01;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   transition: background-color 0.3s ease;
@@ -179,4 +193,9 @@ img {
 
 .button{
   height: 220px !important;
+ 
+}
+
+.linkButton{
+  background-color: #ff5722;
 }

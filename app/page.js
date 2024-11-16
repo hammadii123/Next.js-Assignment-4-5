@@ -6,13 +6,13 @@ import styles2 from "./hello2.css"
 export default function Home() {
   return (
 
-    
+    // bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div><div class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]
 <>
-  <header className="header">
+  <header className="header  ">
     <h1>My Blog</h1>
   </header>
   {/* Blog Section */}
-  <main className="container">
+  <main className="container ">
     <section className="blog-grid">
       {/* Blog 1 */}
       <article className="blog-card">
@@ -23,7 +23,7 @@ export default function Home() {
         This blog delves into the best practices for integrating DevOps with
         cloud infrastructure to optimize efficiency and scalability.</p>
         {/* <a href="blog1.html">Read More</a> */}
-        <Link   href={"/blog1"}>Read More</Link>
+        <Link   class="linkButton" href={"/blog1"}>Read More</Link>
       </article>
       {/* Repeat for at least 6 blogs */}
       <article className="blog-card">
@@ -33,10 +33,10 @@ export default function Home() {
         processes. From automating mundane coding tasks to enhancing security
         and optimizing code, AI tools are reshaping how developers build
         applications.</p>
-       
-        <Link  href={"/blog2"}>Read More</Link>
+        {/* <a href="blog2.html">Read More</a> */}
+        <Link  class="linkButton" href={"/blog2"}>Read More</Link>
       </article>
-      
+      {/* Add more blogs following this structure */}
 
 
       {/* Blog3 */}
@@ -48,7 +48,7 @@ export default function Home() {
         technologies, and staying updated on the latest trends is crucial for
         success.</p>
         {/* <a href="blog2.html">Read More</a> */}
-        <Link href={"/blog3"}>Read More</Link>
+        <Link class="linkButton" href={"/blog3"}>Read More</Link>
       </article>
     </section>
   </main>
